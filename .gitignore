@@ -1,7 +1,8 @@
 # vim tmp file
 *.swp
 
-# 
+# vundle 本身是 dot-vim 的 submodule
+# 其他 vim 的 plugin 通过 vundle 安装
 /bundle/*
 !/bundle/README.md
 !/bundle/vundle/*
