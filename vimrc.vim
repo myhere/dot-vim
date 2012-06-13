@@ -70,7 +70,7 @@ set undofile
 " 自动保存 session
 set sessionoptions=buffers,curdir,resize,folds,tabpages  
 " 注意目录要存在  
-autocmd VimLeave * mks! $HOME/vim-session.vim
+autocmd VimLeave * mks! ~/vim-session.vim
 
 function! ReadSession()
   let session_file = $HOME . '/vim-session.vim'
@@ -122,43 +122,6 @@ inoremap <F7> <C-R>=strftime("%c")<CR>
 
 " HTML5 模板替换, 
 iab html5 <!doctype html><CR><html><CR><head><CR><meta charset="utf-8" /><CR><title></title><CR><link rel="stylesheet" href="css_example_url" /><CR><script src="js_example_url"></script><CR></head><CR><body><CR><div><CR></div><CR><script><CR>/*hello world*/<CR></script><CR></body><CR></html><Esc>6k
-
-" Delete files in vim
-" usage: 
-"   :Remove filename
-command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'SUCCEEDED' : 'FAILED')
-
-
-" plugin 相关 {{
-
-" NERD Tree
-map <silent> ,v :NERDTree<CR>
-
-" bufexplorer
-let g:bufExplorerSplitRight=0
-
-" taglist
-" 只显示当前文件
-let Tlist_Show_One_File = 1
-nnoremap <silent> <F6> :TlistToggle<CR>
-
-" Scratch
-" windows 下启动时出错, 设置下避免
-" let g:scratch_buffer_name='[Scratch]'
-map <silent> <Leader>so :ScratchOpen<CR>
-
-" vimwiki
-let wiki_1 = {}
-let wiki_1.path = 'D:/work/www/myhere.zl/web/vimwiki/wiki/'
-let wiki_1.path_html = 'D:/work/www/myhere.zl/web/vimwiki/wiki_html/'
-let wiki_1.template_path = 'D:/work/www/myhere.zl/web/vimwiki/templates/'
-let wiki_1.template_default = 'default'
-let wiki_1.template_ext = '.tmpl'
-let wiki_1.auto_export = 1
-let wiki_1.css_name = ''
-
-let g:vimwiki_list = [wiki_1]
-" }}
 
 " use tidy to beautify html
 " make sure tidy is in the path
