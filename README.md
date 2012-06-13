@@ -3,6 +3,8 @@ dot-vim
 
 my vim config files
 
+clone 之后先 git submodule update 把 vundle clone 下来
+
 在 .vimrc 或 \_vimrc 写上
 ```vim
 " for vim plugin: vundle
@@ -17,4 +19,5 @@ so ~/.vim/vimrc.vim
 so ./.vim/gvimrc.vim
 ```
 
-安装 vundle, @see https://github.com/gmarik/vundle
+vundle 使用, @see https://github.com/gmarik/vundle
+
