@@ -16,3 +16,5 @@ so ~/.vim/vimrc.vim
 ```vim
 so ./.vim/gvimrc.vim
 ```
+
+安装 vundle, @see https://github.com/gmarik/vundle
