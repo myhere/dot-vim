@@ -1,1 +1,8 @@
+# vim tmp file
 *.swp
+
+# 
+/bundle/*
+!/bundle/README.md
+!/bundle/vundle/*
+
