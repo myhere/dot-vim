@@ -56,6 +56,8 @@ let g:vimwiki_list = [wiki_1]
 
 " jsl
 Bundle 'compilerjsl.vim'
+let g:jsl_config = '~/.vim/conf/jsl.conf'
+
 " jsbeautify
 Bundle 'jsbeautify'
 Bundle 'matchit.zip'
