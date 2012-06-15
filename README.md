@@ -1,7 +1,7 @@
 ## dot-vim
 
-使用 [Vim] 的一个 plugin [Vundle] 管理其他 plugin. 有些 plugin 用 Vundle
-管理在加载时会出问题，则放入 `~/.vim/` 对用目录管理.
+使用 [Vim](http://www.vim.org/) 的一个 plugin [Vundle](https://github.com/gmarik/vundle) 管理其他 plugin. 有些 plugin 用 Vundle
+管理在加载时会出问题，则放入 `~/.vim/` 中以常规方式管理.
 
 
 ## 使用
@@ -11,7 +11,7 @@ $ git clone git@github.com:myhere/dot-vim.git ~/.vim
 ```
 
 2. clone `Vundle`
-```shell
+```bash
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
@@ -36,7 +36,7 @@ endif
 
 
 ## 说明
-* 如何使用 [Vundle]
-* windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
+* 如何使用 [Vundle](https://github.com/gmarik/vundle)
+* windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows){:target="_blank"}
 * 在 windows 和 linux 下测试没有问题
 
