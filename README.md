@@ -16,7 +16,6 @@ $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
 3. 复制下面到 `~/.vimrc` 文件
-
 ```vim
 " windows 下使用 .vim 而不是 vimfiles
 if (has('win32') || has('win64'))
