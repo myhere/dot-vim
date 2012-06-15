@@ -116,16 +116,17 @@ if !has("python")
     finish
 endif
 
-" Load debugger.py either from the runtime directory (usually
-" /usr/local/share/vim/vim71/plugin/ if you're running Vim 7.1) or from the
-" home vim directory (usually ~/.vim/plugin/).
-if filereadable($VIMRUNTIME."/../vimfiles/plugin/debugger.py")
-  pyfile $VIMRUNTIME/../vimfiles/plugin/debugger.py
+
+if filereadable($VIMRUNTIME."/plugin/debugger.py")
+  pyfile $VIMRUNTIME/plugin/debugger.py
 elseif filereadable($HOME."/.vim/plugin/debugger.py")
   pyfile $HOME/.vim/plugin/debugger.py
+elseif filereadable($VIM."/vimfiles/plugin/debugger.py")
+  pyfile $VIM/vimfiles/plugin/debugger.py
 else
   call confirm('debugger.vim: Unable to find debugger.py. Place it in either your home vim directory or in the Vim runtime directory.', 'OK')
 endif
+
 
 map <F1> :python debugger_resize()<cr>
 map <F2> :python debugger_command('step_into')<cr>

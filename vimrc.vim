@@ -62,7 +62,7 @@ vnoremap <silent> ,? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 
 " 无限回退
 " 确保目录存在
-set undodir=~/vim-undodir
+set undodir=~/.vim/vim-undodir
 set undofile
 
 
@@ -70,10 +70,10 @@ set undofile
 " 自动保存 session
 set sessionoptions=buffers,curdir,resize,folds,tabpages  
 " 注意目录要存在  
-autocmd VimLeave * mks! ~/vim-session.vim
+autocmd VimLeave * mks! ~/.vim/vim-sessions/session.vim
 
 function! ReadSession()
-  let session_file = $HOME . '/vim-session.vim'
+  let session_file = $HOME . '/.vim/vim-sessions/session.vim'
   if filereadable(session_file)
     execute "so " . session_file
   else
