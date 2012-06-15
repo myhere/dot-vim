@@ -2,7 +2,7 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 " 设置 runtimepath
-exe 'set rtp+=' . g:vimfile_dir .'/bundle/vundle/'
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -62,8 +62,6 @@ let g:jsl_config = '~/.vim/conf/jsl.conf'
 " jsbeautify
 Bundle 'jsbeautify'
 Bundle 'matchit.zip'
-Bundle 'DBGp-Remote-Debugger-Interface'
-
 
 
 " non github repos
