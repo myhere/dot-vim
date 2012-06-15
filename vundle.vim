@@ -1,7 +1,8 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+" 设置 runtimepath
+exe 'set rtp+=' . g:vimfile_dir .'/bundle/vundle/'
 call vundle#rc()
 
 " let Vundle manage Vundle
