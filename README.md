@@ -6,24 +6,19 @@ dot-vim
 
 将下面写到 ~/.vimrc 文件中
 ```vim
-let g:vimfile_dir = ''
-
-" window or *nix
+" windows 下使用 .vim 而不是 vimfiles
 if (has('win32') || has('win64'))
-  let g:vimfile_dir = '~/vimfiles'
-elseif (has('unix'))
-  let g:vimfile_dir = '~/.vim'
+  set rtp+=~/.vim/
 endif
 
-" source vundle.vim
-exe 'so ' . g:vimfile_dir . '/vundle.vim'
-" source vim 配置
-exe 'so ' . g:vimfile_dir . '/vimrc.vim'
+so ~/.vim/vundle.vim
+so ~/.vim/vimrc.vim
+
+" 如果是 gui 启动, 则加载 gvimrc
+if (has('gui_running'))
+  so ~/.vim/gvimrc.vim
+endif
 ```
 
-将下面写到 ~/_gvimrc 文件中
-```vim
-so ~/vimfiles/gvimrc.vim
-```
 
 
