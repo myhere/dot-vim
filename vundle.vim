@@ -7,7 +7,6 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-" I add vundle as a submodule of my dot-vim repository, so commnet it.
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
