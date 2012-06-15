@@ -1,1 +1,1 @@
-vim plugin bundled @see: https://github.com/gmarik/vundle
+this dir is for vundle! @see: https://github.com/gmarik/vundle
