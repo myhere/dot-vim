@@ -37,6 +37,6 @@ endif
 
 ## 说明
 * 如何使用 [Vundle](https://github.com/gmarik/vundle)
-* windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows){:target="_blank"}
+* windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
 * 在 windows 和 linux 下测试没有问题
 
