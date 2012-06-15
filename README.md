@@ -5,17 +5,17 @@
 
 
 ## 使用
-1. clone `dot-vim`
+1. Clone `dot-vim`
 ```bash
 $ git clone git@github.com:myhere/dot-vim.git ~/.vim
 ```
 
-2. clone `Vundle`
+2. Clone `Vundle`
 ```bash
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
-3. 复制下面到 `~/.vimrc` 文件 
+3. Copy code below to `~/.vimrc` file
 ```vim
 " windows 下使用 .vim 而不是 vimfiles
 if (has('win32') || has('win64'))
@@ -31,7 +31,7 @@ if (has('gui_running'))
 endif
 ```
 
-4. 启动 vim, 执行 `:BundleInstall`
+4. Launch vim, run `:BundleInstall`
 
 
 ## 说明
