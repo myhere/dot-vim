@@ -1,10 +1,21 @@
-dot-vim
-=======
+## dot-vim
 
-使用 vundle 管理 plugin @see https://github.com/gmarik/vundle
+使用 [Vim] 的一个 plugin [Vundle] 管理其他 plugin. 有些 plugin 用 Vundle
+管理在加载时会出问题，则放入 `~/.vim/` 对用目录管理.
 
 
-将下面写到 ~/.vimrc 文件中
+## 使用
+1. clone `dot-vim`
+```bash
+$ git clone git@github.com:myhere/dot-vim.git ~/.vim
+```
+
+2. clone `Vundle`
+```shell
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+
+3. 复制下面到 `~/.vimrc` 文件
 
 ```vim
 " windows 下使用 .vim 而不是 vimfiles
@@ -21,5 +32,11 @@ if (has('gui_running'))
 endif
 ```
 
+4. 启动 vim, 执行 `:BundleInstall`
 
+
+## 说明
+* 如何使用 [Vundle]
+* windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
+* 在 windows 和 linux 下测试没有问题
 
