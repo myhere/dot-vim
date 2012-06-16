@@ -35,7 +35,7 @@
 
 
 ## 说明
-* 如何使用 [Vundle](https://github.com/gmarik/vundle)
 * windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
+* 如何使用 [Vundle](https://github.com/gmarik/vundle)
 * 在 windows 和 linux 下测试没有问题
-
+* 参考 [spf13-vim](https://github.com/spf13/spf13-vim). Awesome vim config files
