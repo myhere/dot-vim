@@ -3,6 +3,7 @@
 
 # bundle 下文件为 vundle 管理
 /bundle/*
+!/bundle/README.md
 
 # vim undofile 保存位置
 /vim-undodir/*
