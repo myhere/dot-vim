@@ -33,6 +33,19 @@ Bundle 'Lokaltog/vim-easymotion'
 " 对齐
 Bundle 'godlygeek/tabular'
 
+" snipmate's dependencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "snipmate-snippets"
+" from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
+Bundle 'garbas/vim-snipmate'
+Bundle 'spf13/snipmate-snippets'
+" Source support_function.vim to support snipmate-snippets.
+if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+  source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+endif
+
+
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
