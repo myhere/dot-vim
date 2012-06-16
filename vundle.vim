@@ -24,13 +24,27 @@ map <silent> ,v :NERDTree<CR>
 Bundle 'kana/vim-scratch'
 map <silent> <Leader>so :ScratchOpen<CR>
 
+" 注释
 Bundle 'scrooloose/nerdcommenter'
 
+" 快速移动
+Bundle 'Lokaltog/vim-easymotion'
+
+" 对齐
+Bundle 'godlygeek/tabular'
 
 " vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" :h fuf-vimrc-example
+nnoremap <silent> <C-A>  :FufBuffer<CR>
+nnoremap <silent> <C-S>  :FufFileWithCurrentBufferDir<CR>
+
+" 重命名
 Bundle 'renamer.vim'
+
+" 搜索补全
+Bundle 'SearchComplete'
 
 " bufexplorer.zip
 Bundle 'bufexplorer.zip'
@@ -63,7 +77,12 @@ Bundle 'FavEx'
 
 " jsbeautify
 Bundle 'jsbeautify'
+
+" html文件 %
 Bundle 'matchit.zip'
+
+" 版本控制 svn, git, ...
+Bundle 'vcscommand.vim'
 
 
 " non github repos
