@@ -6,4 +6,7 @@ set rtp+=~/.vim/php-manual/
 autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
 ```
 
-具体见: PHP manual in Vim help format @see http://vim.wikia.com/wiki/PHP_manual_in_Vim_help_format
+具体见: PHP manual in Vim help format 
+@see
+* http://vim.wikia.com/wiki/PHP_manual_in_Vim_help_format
+* http://www.laruence.com/2010/08/18/1718.html
