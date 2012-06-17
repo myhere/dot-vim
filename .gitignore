@@ -13,3 +13,7 @@
 /vim-sessions/*
 !/vim-sessions/README.md
 
+# php-manual 位置
+/php-manual/*
+!/php-manual/README.md
+!/php-manual/vim-php-manual.tgz

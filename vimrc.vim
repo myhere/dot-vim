@@ -88,6 +88,10 @@ vnoremap <silent> ,? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 set undodir=~/.vim/vim-undodir
 set undofile
 
+" 进入 php 文件 help 设置查看 php-manual
+set rtp+=~/.vim/php-manual/
+autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
+
 " 切换 buffer 后立即切换 cwd
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
