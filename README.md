@@ -35,7 +35,7 @@
 
 ## 设置
 1. plugin/debugger.vim 需要有 python, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
-2. 解压 php-manual/vim-php-manual.tgz 文件到 php-manual/doc/ 目录下, 具体见: [php-manual] [/myhere/dot-vim/tree/master/php-manual/README.md]
+2. 解压 php-manual/vim-php-manual.tgz 文件到 php-manual/doc/ 目录下, 具体见: [README](/myhere/dot-vim/tree/master/php-manual/README.md)
 
 
 ## 说明
