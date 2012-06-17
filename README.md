@@ -33,9 +33,12 @@
 
 4. Launch vim, run `:BundleInstall`
 
+## 设置
+1. plugin/debugger.vim 需要有 python, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
+2. 解压 php-manual/vim-php-manual.tgz 文件到 php-manual/doc/ 目录下, 具体见: [php-manual] [/myhere/dot-vim/tree/master/php-manual/README.md]
+
 
 ## 说明
 * windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
 * 如何使用 [Vundle](https://github.com/gmarik/vundle)
-* 在 windows 和 linux 下测试没有问题
 * 参考 [spf13-vim](https://github.com/spf13/spf13-vim). Awesome vim config files
