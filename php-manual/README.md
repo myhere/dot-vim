@@ -1,4 +1,4 @@
-这个目录放 php 的 manual, 将 `vim-php-manual.tgz` 解压到 `./doc` 目录
+这个目录放 php 的 manual, 将 `vim-php-manual.tgz` 解压到 `~/.vim/php-manual/doc` 目录
 在 vim 中要有这个设置:
 
 ```vim
