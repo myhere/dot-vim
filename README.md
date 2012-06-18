@@ -36,7 +36,7 @@
 
 ## 设置
 1. `plugin/debugger.vim` 需要有 `python`, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
-2. `conque` 需要有 `python`, 更新文件到 http://code.google.com/p/conque/ [[下载]]
+2. `conque` 需要有 `python`, 更新文件到 http://code.google.com/p/conque/ 下载
 3. 解压 `php-manual/vim-php-manual.tgz` 文件到 `php-manual/doc/` 目录下, 具体见: [README](/myhere/dot-vim/tree/master/php-manual/README.md)
 
 
