@@ -50,7 +50,7 @@ endif
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " :h fuf-vimrc-example
-nnoremap <silent> <C-A>  :FufBuffer<CR>
+nnoremap <silent> <C-Q>  :FufBuffer<CR>
 nnoremap <silent> <C-S>  :FufFileWithCurrentBufferDir<CR>
 
 " 重命名
@@ -96,11 +96,6 @@ Bundle 'matchit.zip'
 
 " 版本控制 svn, git, ...
 Bundle 'vcscommand.vim'
-
-" vim 中执行 shell
-" 需要安装
-" see http://code.google.com/p/conque/
-Bundle 'Conque-Shell'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
