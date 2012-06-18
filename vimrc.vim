@@ -14,8 +14,14 @@ set nowrap
 set foldcolumn=1
 set number
 
+set history=1000
+
 " 保存 bufferlist
 set viminfo+=%
+
+" 显示特殊字符(区分 tab 和 空格)
+set list
+set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 
 set display=lastline
 
@@ -36,10 +42,27 @@ set shiftwidth=2
 " set textwidth=78
 set textwidth=78
 
-" 总是显示状态栏
-set laststatus=2
 " 状态栏设置
-set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+if has('cmdline_info')
+  set ruler                   " show the ruler
+  set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+  set showcmd                 " show partial commands in status line and
+  " selected characters/lines in visual mode
+endif
+
+if has('statusline')
+  set laststatus=2
+
+  " Broken down into easily includeable segments
+  set statusline=%<%f\     " Filename
+  set statusline+=%w%h%m%r " Options
+  " set statusline+=%{fugitive#statusline()} "  Git Hotness
+  set statusline+=\ [%{&ff}/%Y]           " filetype
+  set statusline+=\ [%{getcwd()}]         " current dir
+  set statusline+=\ [%{&fenc==\"\"?&enc:&fenc}]  " fileencoding
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+endif
+
 
 set diffopt=vertical
 
@@ -62,18 +85,25 @@ vnoremap <silent> ,? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 
 " 无限回退
 " 确保目录存在
-set undodir=~/vim-undodir
+set undodir=~/.vim/vim-undodir
 set undofile
+
+" 进入 php 文件 help 设置查看 php-manual
+set rtp+=~/.vim/php-manual/
+autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
+
+" 切换 buffer 后立即切换 cwd
+autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 
 " ------------{--------------
 " 自动保存 session
 set sessionoptions=buffers,curdir,resize,folds,tabpages  
 " 注意目录要存在  
-autocmd VimLeave * mks! ~/vim-session.vim
+autocmd VimLeave * mks! ~/.vim/vim-sessions/session.vim
 
 function! ReadSession()
-  let session_file = $HOME . '/vim-session.vim'
+  let session_file = $HOME . '/.vim/vim-sessions/session.vim'
   if filereadable(session_file)
     execute "so " . session_file
   else
@@ -107,10 +137,13 @@ cnoremap <m-f> <Right>
 cnoremap <m-b> <Left>
 
 " insert-mode 移动
-imap <silent><c-f> <Right>
-imap <silent><c-b> <Left>
-imap <silent><m-f> <S-Right>
-imap <silent><m-b> <S-Left>
+imap <silent><C-F> <Right>
+imap <silent><C-B> <Left>
+imap <silent><M-F> <S-Right>
+imap <silent><M-B> <S-Left>
+imap <silent><C-A> <Home>
+imap <silent><C-E> <End>
+
 
 " 快速移动
 map <c-n> 5j
@@ -119,9 +152,6 @@ map <c-p> 5k
 " 插入当前日期
 nnoremap <F7> "=strftime("%c")<CR>P
 inoremap <F7> <C-R>=strftime("%c")<CR>
-
-" HTML5 模板替换, 
-iab html5 <!doctype html><CR><html><CR><head><CR><meta charset="utf-8" /><CR><title></title><CR><link rel="stylesheet" href="css_example_url" /><CR><script src="js_example_url"></script><CR></head><CR><body><CR><div><CR></div><CR><script><CR>/*hello world*/<CR></script><CR></body><CR></html><Esc>6k
 
 " use tidy to beautify html
 " make sure tidy is in the path
@@ -132,40 +162,40 @@ endfunction
 
 " YUICompressor
 function! YUICompressor()
-    " let yuicompressor_program = 'java -jar D:/tools/ourtools/yui-compressor/yuicompressor.jar --verbose'
-    let yuicompressor_program = 'java -jar D:/tools/ourtools/yui-compressor/yuicompressor.jar'
- 
-    let yui_option_charset = '--charset ' . &fileencoding
-    
-    let current_file = expand('%:p')
-    if match(current_file, "\.js$") != -1
-        let yui_option_type = '--type js'
-    elseif match(current_file, "\.css$") != -1
-        let yui_option_type = '--type css'
-    else
-        echoerr 'Error: File "' . current_file . '" is not js or css!'
-        return
-    endif
-    
-    let yui_option_outputfile = substitute(current_file, '\.\(js\|css\)$', '-min\.\1', "")
-    if yui_option_outputfile == current_file
-        echoerr 'Error: Cannot substitute filename to "-min" file!'
-        return
-    endif
-    
-    let yui_option_outputfile = '-o ' . shellescape(yui_option_outputfile)
-    let current_file = shellescape(current_file)
+  " let yuicompressor_program = 'java -jar D:/tools/ourtools/yui-compressor/yuicompressor.jar --verbose'
+  let yuicompressor_program = 'java -jar D:/tools/ourtools/yui-compressor/yuicompressor.jar'
+
+  let yui_option_charset = '--charset ' . &fileencoding
+
+  let current_file = expand('%:p')
+  if match(current_file, "\.js$") != -1
+    let yui_option_type = '--type js'
+  elseif match(current_file, "\.css$") != -1
+    let yui_option_type = '--type css'
+  else
+    echoerr 'Error: File "' . current_file . '" is not js or css!'
+    return
+  endif
+
+  let yui_option_outputfile = substitute(current_file, '\.\(js\|css\)$', '-min\.\1', "")
+  if yui_option_outputfile == current_file
+    echoerr 'Error: Cannot substitute filename to "-min" file!'
+    return
+  endif
+
+  let yui_option_outputfile = '-o ' . shellescape(yui_option_outputfile)
+  let current_file = shellescape(current_file)
 
 
-    let yui_options = yui_option_charset . ' ' . yui_option_type . ' ' . yui_option_outputfile . ' ' . current_file
-    let cmd = yuicompressor_program . ' ' . yui_options
-    
-    " echo cmd
-    " return
-    
-    let cmd_output = system(cmd)
-    
-    echo cmd_output
+  let yui_options = yui_option_charset . ' ' . yui_option_type . ' ' . yui_option_outputfile . ' ' . current_file
+  let cmd = yuicompressor_program . ' ' . yui_options
+
+  " echo cmd
+  " return
+
+  let cmd_output = system(cmd)
+
+  echo cmd_output
 endfunction
 
 " vim 脚本练习

@@ -1,12 +1,12 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+" 设置 runtimepath
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-" I add vundle as a submodule of my dot-vim repository, so commnet it.
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -24,13 +24,40 @@ map <silent> ,v :NERDTree<CR>
 Bundle 'kana/vim-scratch'
 map <silent> <Leader>so :ScratchOpen<CR>
 
+" 注释
 Bundle 'scrooloose/nerdcommenter'
+
+" 快速移动
+Bundle 'Lokaltog/vim-easymotion'
+
+" 对齐
+Bundle 'godlygeek/tabular'
+
+" snipmate's dependencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "snipmate-snippets"
+" from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
+Bundle 'garbas/vim-snipmate'
+Bundle 'spf13/snipmate-snippets'
+" Source support_function.vim to support snipmate-snippets.
+if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+  source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+endif
 
 
 " vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" :h fuf-vimrc-example
+nnoremap <silent> <C-A>  :FufBuffer<CR>
+nnoremap <silent> <C-S>  :FufFileWithCurrentBufferDir<CR>
+
+" 重命名
 Bundle 'renamer.vim'
+
+" 搜索补全
+Bundle 'SearchComplete'
 
 " bufexplorer.zip
 Bundle 'bufexplorer.zip'
@@ -58,12 +85,22 @@ let g:vimwiki_list = [wiki_1]
 Bundle 'compilerjsl.vim'
 let g:jsl_config = '~/.vim/conf/jsl.conf'
 
+" favEx
+Bundle 'FavEx' 
+
 " jsbeautify
 Bundle 'jsbeautify'
+
+" html文件 %
 Bundle 'matchit.zip'
-Bundle 'DBGp-Remote-Debugger-Interface'
 
+" 版本控制 svn, git, ...
+Bundle 'vcscommand.vim'
 
+" vim 中执行 shell
+" 需要安装
+" see http://code.google.com/p/conque/
+Bundle 'Conque-Shell'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'

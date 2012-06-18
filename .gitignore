@@ -3,3 +3,17 @@
 
 # bundle 下文件为 vundle 管理
 /bundle/*
+!/bundle/README.md
+
+# vim undofile 保存位置
+/vim-undodir/*
+!/vim-undodir/README.md
+
+# vim session 保存位置
+/vim-sessions/*
+!/vim-sessions/README.md
+
+# php-manual 位置
+/php-manual/*
+!/php-manual/README.md
+!/php-manual/vim-php-manual.tgz
