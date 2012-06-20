@@ -54,11 +54,11 @@ if has('statusline')
   set laststatus=2
 
   " Broken down into easily includeable segments
-  set statusline=%<%f     " Filename
-  set statusline+=%m%r " Options
+  set statusline=%<%F     " Filename
+  set statusline+=%m%r%h%w  " Options
   " set statusline+=%{fugitive#statusline()} "  Git Hotness
   " set statusline+=\ [%{&ff}/%Y]           " filetype
-  set statusline+=\ [%{getcwd()}]         " current dir
+  " set statusline+=\ [%{getcwd()}]         " current dir
   set statusline+=\ [%{&fenc==\"\"?&enc:&fenc}]  " fileencoding
   set statusline+=%=%-10.(%l,%c%V%)\ %p%% " Right aligned file nav info
 endif

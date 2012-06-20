@@ -50,8 +50,8 @@ endif
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " :h fuf-vimrc-example
-nnoremap <silent> ,fb  :FufBuffer<CR>
-nnoremap <silent> ,ff  :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> ,;  :FufBuffer<CR>
+nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
 
 " 重命名
 Bundle 'renamer.vim'
