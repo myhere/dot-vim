@@ -33,6 +33,8 @@ Bundle 'Lokaltog/vim-easymotion'
 " 对齐
 Bundle 'godlygeek/tabular'
 
+Bundle 'kien/ctrlp.vim'
+
 " snipmate's dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -46,12 +48,14 @@ if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functio
 endif
 
 
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" :h fuf-vimrc-example
-nnoremap <silent> ,,  :FufBuffer<CR>
-nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
+" fuzzy file|buffer|mru finder
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_by_filename = 1
+let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
+let g:ctrlp_working_path_mode = 1
+let g:ctrlp_lazy_update = 1
+
 
 " 重命名
 Bundle 'renamer.vim'

@@ -2,10 +2,10 @@
 set nocompatible
 " 不产生备份文件
 set nobackup
-set noignorecase
+set ignorecase
 set smartcase
 set hlsearch
-" set incsearch
+set incsearch
 
 " backspace 删除键
 set backspace=indent,eol,start
@@ -24,6 +24,13 @@ set viminfo+=%
 " 显示特殊字符(区分 tab 和 空格)
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
+
+set cursorline
+
+set nostartofline
+
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
 
 set display=lastline
 
@@ -107,7 +114,7 @@ colorscheme desert
 " ------------------按键映射------------------
 
 " 复制
-map <silent> <c-y> "+y
+map <silent> <S-y> "+y
 
 " 搜索选中
 vnoremap <silent> ,/ y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
@@ -124,7 +131,7 @@ map <silent> ,q :close<CR><CR>
 "" 窗口大小
 map <silent> ,> :vert res<CR>
 map <silent> ,< :res<CR>
-map <silent> ,a <C-W>=
+map <silent> ,, <C-W>=
 
 " command-mode 移动
 cnoremap <M-f> <Right>
@@ -141,7 +148,7 @@ imap <silent><C-e> <End>
 
 " 快速移动
 map <c-n> 5j
-map <c-p> 5k
+map <c-m> 5k
 
 " 插入当前日期
 nnoremap <F7> "=strftime("%c")<CR>P
