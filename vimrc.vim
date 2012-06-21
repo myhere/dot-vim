@@ -1,15 +1,17 @@
+" ------------------选项------------------
 set nocompatible
 " 不产生备份文件
 set nobackup
-set ignorecase
+set noignorecase
 set smartcase
 set hlsearch
 " set incsearch
+
 " backspace 删除键
 set backspace=indent,eol,start
 set expandtab
 
-set nowrap
+set wrap
 
 set foldcolumn=1
 set number
@@ -39,7 +41,6 @@ set softtabstop=2
 " unify
 set shiftwidth=2
 
-" set textwidth=78
 set textwidth=78
 
 " 状态栏设置
@@ -49,7 +50,6 @@ if has('cmdline_info')
   set showcmd                 " show partial commands in status line and
   " selected characters/lines in visual mode
 endif
-
 if has('statusline')
   set laststatus=2
 
@@ -66,43 +66,26 @@ endif
 
 
 set diffopt=vertical
-
 set splitright
 
-syntax on
-
-" enable file type detection
-filetype on
-filetype plugin on
-filetype indent on
-
-" 复制
-map <silent> 'y "+y
-
-" 搜索选中
-vnoremap <silent> ,/ y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
-vnoremap <silent> ,? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
-
-
-" 无限回退
-" 确保目录存在
+" 无限回退, 确保目录存在
 set undodir=~/.vim/vim-undodir
 set undofile
+
 
 " 进入 php 文件 help 设置查看 php-manual
 set rtp+=~/.vim/php-manual/
 autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
 
+
 " 切换 buffer 后立即切换 cwd
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 
-" ------------{--------------
 " 自动保存 session
 set sessionoptions=buffers,curdir,resize,folds,tabpages  
 " 注意目录要存在  
 autocmd VimLeave * mks! ~/.vim/vim-sessions/session.vim
-
 function! ReadSession()
   let session_file = $HOME . '/.vim/vim-sessions/session.vim'
   if filereadable(session_file)
@@ -113,37 +96,47 @@ function! ReadSession()
 endfunction
 " 启动 vim 时自动读取 session 文件, 目前重新定义 vim.bat/gvim.bat
 " autocmd VimEnter * :call ReadSession()
-" ------------}--------------
 
 
-" 打开当前文件的目录
-map <silent> ,o :Explore<CR><CR>
-" map <silent> ,v :Vexplore<CR><CR>
-map <silent> ,q :close<CR><CR>
+syntax on
+filetype plugin indent on
 
-" 切换到当前文件的目录
-map <silent> <leader>cd :cd %:h<cr>
+colorscheme desert
+
+
+" ------------------按键映射------------------
+
+" 复制
+map <silent> <c-y> "+y
+
+" 搜索选中
+vnoremap <silent> ,/ y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+vnoremap <silent> ,? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+
+
 " 打开 cmd
 if (has('win32'))
   map <silent> <Leader>st :silent !start<CR>
 endif
 
+map <silent> ,q :close<CR><CR>
+
 "" 窗口大小
 map <silent> ,> :vert res<CR>
 map <silent> ,< :res<CR>
-map <silent> ,, <C-W>=
+map <silent> ,a <C-W>=
 
 " command-mode 移动
-cnoremap <m-f> <Right>
-cnoremap <m-b> <Left>
+cnoremap <M-f> <Right>
+cnoremap <M-b> <Left>
 
 " insert-mode 移动
-imap <silent><C-F> <Right>
-imap <silent><C-B> <Left>
-imap <silent><M-F> <S-Right>
-imap <silent><M-B> <S-Left>
-imap <silent><C-A> <Home>
-imap <silent><C-E> <End>
+imap <silent><C-f> <Right>
+imap <silent><C-b> <Left>
+imap <silent><M-f> <S-Right>
+imap <silent><M-b> <S-Left>
+imap <silent><C-a> <Home>
+imap <silent><C-e> <End>
 
 
 " 快速移动
@@ -153,6 +146,9 @@ map <c-p> 5k
 " 插入当前日期
 nnoremap <F7> "=strftime("%c")<CR>P
 inoremap <F7> <C-R>=strftime("%c")<CR>
+
+
+" ------------------函数------------------
 
 " use tidy to beautify html
 " make sure tidy is in the path
@@ -199,17 +195,6 @@ function! YUICompressor()
   echo cmd_output
 endfunction
 
-" vim 脚本练习
-" 根据时间改变颜色
-colorscheme desert
-let g:FavColorSchemes = [ 'darkblue', 'morning', 'shine', 'evening']
-function SetTimeOfDayColor()
-  " 加零是为了保证函数返回值是 数字类型
-  let CurrentIndex = ( strftime( '%H') + 0 ) / 6
-  if g:colors_name !~ g:FavColorSchemes[ CurrentIndex]
-    execute 'colorscheme ' . g:FavColorSchemes[ CurrentIndex]
-  endif
-endfunction
 
 
 " 做批量替换时用来产生 唯一 id
