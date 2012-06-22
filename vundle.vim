@@ -61,8 +61,9 @@ Bundle 'kien/ctrlp.vim'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
-let g:ctrlp_working_path_mode = 1
 let g:ctrlp_lazy_update = 1
+let g:ctrlp_max_files = 1000
+let g:ctrlp_max_depth = 10
 
 
 " 重命名
