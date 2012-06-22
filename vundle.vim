@@ -48,6 +48,14 @@ if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functio
 endif
 
 
+" fuzzyFinder 打开文件
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" :h fuf-vimrc-example
+nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
+
+
+" ctrlp buffer|mru
 " fuzzy file|buffer|mru finder
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_cmd = 'CtrlPBuffer'
