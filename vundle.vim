@@ -64,6 +64,7 @@ let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
 let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 10
+let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
 
 
 " 重命名
