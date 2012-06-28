@@ -53,6 +53,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " :h fuf-vimrc-example
 nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> ,b  :FufBuffer<CR>
 
 
 " ctrlp buffer|mru

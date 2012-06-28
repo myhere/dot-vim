@@ -115,7 +115,7 @@ hi cursorline  guibg=#888c12
 " ------------------按键映射------------------
 
 " 复制
-map <silent> <S-y> "+y
+vnoremap <silent> <S-y> "+y
 
 " 搜索选中
 vnoremap <silent> ,/ y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
@@ -154,6 +154,12 @@ map <c-m> 5k
 " 插入当前日期
 nnoremap <F7> "=strftime("%c")<CR>P
 inoremap <F7> <C-R>=strftime("%c")<CR>
+
+
+" ------------------单独管理plugin按键映射------------------
+"  conque 按键
+nnoremap <silent> ,c :ConqueTermVSplit cmd<CR>
+
 
 
 " ------------------函数------------------
