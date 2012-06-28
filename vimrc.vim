@@ -109,6 +109,7 @@ syntax on
 filetype plugin indent on
 
 colorscheme desert
+hi cursorline  guibg=#888c12
 
 
 " ------------------按键映射------------------
