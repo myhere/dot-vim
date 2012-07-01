@@ -38,7 +38,6 @@ Bundle 'kien/ctrlp.vim'
 " snipmate's dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "snipmate-snippets"
 " from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
 Bundle 'garbas/vim-snipmate'
 Bundle 'spf13/snipmate-snippets'
