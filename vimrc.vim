@@ -145,6 +145,10 @@ imap <silent><M-b> <S-Left>
 imap <silent><C-a> <Home>
 imap <silent><C-e> <End>
 
+" 保存
+nmap <silent><C-s> :w<CR>
+imap <silent><C-s> <Esc>:w<CR>
+
 
 " 快速移动
 map <c-n> 5j
