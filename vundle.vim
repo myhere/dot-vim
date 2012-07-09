@@ -111,6 +111,10 @@ Bundle 'matchit.zip'
 " 版本控制 svn, git, ...
 Bundle 'vcscommand.vim'
 
+" json syntax highlight
+Bundle 'vim-json-bundle'
+au! BufRead,BufNewFile *.json set filetype=json
+
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
