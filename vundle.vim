@@ -48,6 +48,10 @@ if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functio
 endif
 
 
+" zencoding
+Bundle 'ZenCoding.vim'
+
+
 " fuzzyFinder 打开文件
 Bundle 'L9'
 Bundle 'FuzzyFinder'
