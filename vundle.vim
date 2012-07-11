@@ -25,7 +25,8 @@ Bundle 'kana/vim-scratch'
 map <silent> <Leader>so :ScratchOpen<CR>
 
 " 注释
-Bundle 'scrooloose/nerdcommenter'
+" Bundle 'scrooloose/nerdcommenter'
+Bundle 'tComment'
 
 " 快速移动
 Bundle 'Lokaltog/vim-easymotion'
