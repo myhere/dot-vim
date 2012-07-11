@@ -119,6 +119,10 @@ Bundle 'vcscommand.vim'
 " css3 相关
 Bundle 'css3-syntax-plus'
 
+" json syntax highlight
+Bundle 'vim-json-bundle'
+au! BufRead,BufNewFile *.json set filetype=json
+
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
