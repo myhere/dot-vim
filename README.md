@@ -1,7 +1,8 @@
 ## dot-vim
 
 使用 [Vim](http://www.vim.org/) 的一个 plugin [Vundle](https://github.com/gmarik/vundle) 管理其他 plugin. 有些 plugin 用 Vundle
-管理在加载时会出问题，则放入 `~/.vim/` 中以常规方式管理.
+管理在加载时会出问题，则放入 `~/.vim/` 中以常规方式管理, 对应设置在 vimrc.vim
+中. 如果可以通过 `submodule` 管理, 则通过 `submodule` 管理
 
 
 ## 使用
@@ -41,9 +42,11 @@
 
 
 ## 设置
-1. `plugin/debugger.vim` 需要有 `python`, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
-2. `conque` 需要有 `python`, 更新文件到 http://code.google.com/p/conque/ 下载
-3. 解压 `php-manual/vim-php-manual.tgz` 文件到 `php-manual/doc/` 目录下, 具体见: [README](/myhere/dot-vim/tree/master/php-manual/README.md)
+1. 目前单独管理的 plugin: `debugger`, `conque`, 两者均依赖 python
+2. `plugin/debugger.vim`, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
+3. `conque`, 更新文件到 http://code.google.com/p/conque/ 下载
+4. php 的 helpprg, 解压 `php-manual/vim-php-manual.tgz` 文件到 `php-manual/doc/` 目录下, 具体见: [README](/myhere/dot-vim/tree/master/php-manual/README.md)
+5. node 的 dictionary 通过 git submodule 管理, 对应设置放在 vimrc.vim 中
 
 
 ## 说明
