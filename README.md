@@ -33,6 +33,12 @@
 
 4. Launch vim, run `:BundleInstall`
 
+5. git `submodule`
+     ```bash
+     $ git submodule init
+     $ git submodule update
+     ```
+
 
 ## 设置
 1. `plugin/debugger.vim` 需要有 `python`, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
