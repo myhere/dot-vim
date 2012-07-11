@@ -1,0 +1,3 @@
+[submodule "node-dict"]
+	path = node-dict
+	url = git://github.com/guileen/vim-node.git

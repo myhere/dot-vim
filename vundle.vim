@@ -111,6 +111,9 @@ Bundle 'matchit.zip'
 " 版本控制 svn, git, ...
 Bundle 'vcscommand.vim'
 
+" css3 相关
+Bundle 'css3-syntax-plus'
+
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
