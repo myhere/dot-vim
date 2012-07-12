@@ -42,11 +42,11 @@ set fencs=utf-8,ucs-bom,euc-jp,gb18030,gbk,gb2312,cp936
 set fo=tcrqn
 
 " tab spacing (settings below are just to unify it)
-set tabstop=2
+set tabstop=4
 " unify
-set softtabstop=2
+set softtabstop=4
 " unify
-set shiftwidth=2
+set shiftwidth=4
 
 set textwidth=78
 
