@@ -84,6 +84,9 @@ set undofile
 set rtp+=~/.vim/php-manual/
 autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
 
+" 进入 js 文件 https://github.com/guileen/vim-node
+autocmd FileType javascript set dictionary+=~/.vim/node-dict/dict/node.dict
+
 
 " 切换 buffer 后立即切换 cwd
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif

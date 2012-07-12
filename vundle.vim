@@ -25,7 +25,8 @@ Bundle 'kana/vim-scratch'
 map <silent> <Leader>so :ScratchOpen<CR>
 
 " 注释
-Bundle 'scrooloose/nerdcommenter'
+" Bundle 'scrooloose/nerdcommenter'
+Bundle 'tComment'
 
 " 快速移动
 Bundle 'Lokaltog/vim-easymotion'
@@ -45,6 +46,10 @@ Bundle 'spf13/snipmate-snippets'
 if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
   source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
 endif
+
+
+" zencoding
+Bundle 'ZenCoding.vim'
 
 
 " fuzzyFinder 打开文件
@@ -110,6 +115,9 @@ Bundle 'matchit.zip'
 
 " 版本控制 svn, git, ...
 Bundle 'vcscommand.vim'
+
+" css3 相关
+Bundle 'css3-syntax-plus'
 
 " json syntax highlight
 Bundle 'vim-json-bundle'
