@@ -55,6 +55,12 @@ let g:ctrlp_max_depth = 10
 let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
 
 
+" windows 下 ack 安装依赖 https://github.com/myhere/bin-in-path_windows/blob/master/ack.bat
+if executable('ack')
+  Bundle 'mileszs/ack.vim'
+endif
+
+
 " zencoding
 Bundle 'ZenCoding.vim'
 

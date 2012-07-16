@@ -25,6 +25,7 @@
 4. Launch vim, run `:BundleInstall`
 
 
+
 ## 设置
 1. 目前单独管理的 plugin: `debugger`, `conque`, 两者均依赖 python
 2. `plugin/debugger.vim`, 具体设置见: http://zhangl.in/2012/03/debug-php-with-vim-on-windows/
@@ -34,6 +35,7 @@
 
 
 ## 说明
-* windows 下使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
 * 如何使用 [Vundle](https://github.com/gmarik/vundle)
+* windows 下 `vundle` 使用请查看 [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows)
+* windows 下一些外部命令依赖 [msysgit](http://code.google.com/p/msysgit/) 和 [bin-in-path_windows](https://github.com/myhere/bin-in-path_windows) 下载并放到环境变量中
 * 参考 [spf13-vim](https://github.com/spf13/spf13-vim). Awesome vim config files
