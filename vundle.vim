@@ -24,17 +24,12 @@ map <silent> ,v :NERDTree<CR>
 Bundle 'kana/vim-scratch'
 map <silent> <Leader>so :ScratchOpen<CR>
 
-" 注释
-" Bundle 'scrooloose/nerdcommenter'
-Bundle 'tComment'
-
 " 快速移动
 Bundle 'Lokaltog/vim-easymotion'
 
 " 对齐
 Bundle 'godlygeek/tabular'
 
-Bundle 'kien/ctrlp.vim'
 
 " snipmate's dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -48,18 +43,6 @@ if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functio
 endif
 
 
-" zencoding
-Bundle 'ZenCoding.vim'
-
-
-" fuzzyFinder 打开文件
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" :h fuf-vimrc-example
-nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
-nnoremap <silent> ,b  :FufBuffer<CR>
-
-
 " ctrlp buffer|mru
 " fuzzy file|buffer|mru finder
 Bundle 'kien/ctrlp.vim'
@@ -70,6 +53,22 @@ let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 10
 let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
+
+
+" zencoding
+Bundle 'ZenCoding.vim'
+
+" 注释
+" Bundle 'scrooloose/nerdcommenter'
+Bundle 'tComment'
+
+" fuzzyFinder 打开文件
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" :h fuf-vimrc-example
+nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> ,b  :FufBuffer<CR>
+
 
 
 " 重命名
@@ -122,6 +121,9 @@ Bundle 'css3-syntax-plus'
 " json syntax highlight
 Bundle 'vim-json-bundle'
 au! BufRead,BufNewFile *.json set filetype=json
+
+" nodejs 'omnifunc' function of vim
+Bundle 'git@github.com:myhere/vim-nodejs-complete.git'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
