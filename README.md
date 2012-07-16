@@ -6,9 +6,9 @@
 
 
 ## 使用
-1. Clone `dot-vim`
+1. Clone `dot-vim` and init submodules
      ```bash
-     $ git clone git@github.com:myhere/dot-vim.git ~/.vim
+     $ git clone --recursive git@github.com:myhere/dot-vim.git ~/.vim
      ```
 
 2. Clone `Vundle`
@@ -23,12 +23,6 @@
      ```
 
 4. Launch vim, run `:BundleInstall`
-
-5. git `submodule`
-     ```bash
-     $ git submodule init
-     $ git submodule update
-     ```
 
 
 ## 设置
