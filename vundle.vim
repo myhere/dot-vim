@@ -131,6 +131,9 @@ au! BufRead,BufNewFile *.json set filetype=json
 " nodejs 'omnifunc' function of vim
 Bundle 'git@github.com:myhere/vim-nodejs-complete.git'
 
+" for vim-script debug
+Bundle 'Decho'
+
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
