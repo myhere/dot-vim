@@ -18,6 +18,8 @@ set number
 
 set history=1000
 
+" set spell
+
 " 保存 bufferlist
 set viminfo+=%
 

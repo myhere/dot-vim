@@ -20,6 +20,11 @@ Bundle 'gmarik/vundle'
 " NERDTree 
 Bundle 'scrooloose/nerdtree.git'
 map <silent> ,v :NERDTree<CR>
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+let NERDTreeChDirMode=0
+
 
 Bundle 'kana/vim-scratch'
 map <silent> <Leader>so :ScratchOpen<CR>
@@ -53,6 +58,8 @@ let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 10
 let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
+let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
+
 
 
 " windows 下 ack 安装依赖 https://github.com/myhere/bin-in-path_windows/blob/master/ack.bat
@@ -86,6 +93,7 @@ Bundle 'SearchComplete'
 " bufexplorer.zip
 Bundle 'bufexplorer.zip'
 let g:bufExplorerSplitRight=0
+
 
 Bundle 'taglist.vim'
 " 只显示当前文件
