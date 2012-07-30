@@ -161,7 +161,7 @@ imap <silent><C-s> <Esc>:w<CR>
 
 
 " 快速移动
-map <C-n> 5k
+map <C-k> 5k
 map <C-j> 5j
 
 " 插入当前日期
