@@ -161,8 +161,8 @@ imap <silent><C-s> <Esc>:w<CR>
 
 
 " 快速移动
-map <c-n> 5j
-map <c-m> 5k
+map <C-n> 5k
+map <C-j> 5j
 
 " 插入当前日期
 nnoremap <F7> "=strftime("%c")<CR>P
