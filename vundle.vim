@@ -98,7 +98,7 @@ let g:bufExplorerSplitRight=0
 Bundle 'taglist.vim'
 " 只显示当前文件
 let Tlist_Show_One_File = 1
-nnoremap <silent> <F6> :TlistToggle<CR>
+nnoremap <silent> ,t :TlistToggle<CR>
 
 " vimwiki
 Bundle 'vimwiki'

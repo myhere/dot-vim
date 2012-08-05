@@ -154,6 +154,10 @@ imap <silent><M-f> <S-Right>
 imap <silent><M-b> <S-Left>
 imap <silent><C-a> <Home>
 imap <silent><C-e> <End>
+imap <silent><M-h> <Left>
+imap <silent><M-j> <Down>
+imap <silent><M-k> <Up>
+imap <silent><M-l> <Right>
 
 " 保存
 nmap <silent><C-s> :w<CR>
