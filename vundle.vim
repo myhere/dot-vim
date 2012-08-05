@@ -136,6 +136,9 @@ Bundle 'css3-syntax-plus'
 Bundle 'vim-json-bundle'
 au! BufRead,BufNewFile *.json set filetype=json
 
+Bundle 'Gundo'
+
+
 " nodejs 'omnifunc' function of vim
 Bundle 'git@github.com:myhere/vim-nodejs-complete.git'
 
