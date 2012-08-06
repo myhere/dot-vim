@@ -29,7 +29,7 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 
 set wildmenu                    " show list instead of just completing
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
-set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
+set whichwrap=b,s,<,>,[,]   " backspace and cursor keys wrap to
 
 
 set cursorline
@@ -68,13 +68,13 @@ if has('statusline')
   set laststatus=2
 
   " Broken down into easily includeable segments
-  set statusline=%t     " Filename
-  set statusline+=%m%r%h%w  " Options
+  set statusline=%F             " Filename
+  set statusline+=%m%r%h%w      " Options
+  set statusline+=%<\ [%{&ff}/%Y] " filetype
+  set statusline+=%<\ [%{&fenc==\"\"?&enc:&fenc}]  " fileencoding
   " set statusline+=%{fugitive#statusline()} "  Git Hotness
-  " set statusline+=\ [%{&ff}/%Y]           " filetype
   " set statusline+=\ [%{getcwd()}]         " current dir
-  set statusline+=\ [%<%{expand('%:p:h')}]    " path to current file
-  set statusline+=\ [%{&fenc==\"\"?&enc:&fenc}]  " fileencoding
+  " set statusline+=\ [%<%{expand('%:p:h')}]    " path to current file
   set statusline+=%=%-10.(%l,%c%V%)\ %p%% " Right aligned file nav info
 endif
 
