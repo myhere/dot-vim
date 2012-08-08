@@ -17,3 +17,10 @@
 /php-manual/*
 !/php-manual/README.md
 !/php-manual/vim-php-manual.tgz
+
+
+# plugin 产生的临时文件
+/autoload/conque_term/conque_globals.pyc
+/autoload/conque_term/conque_sole_shared_memory.pyc
+/autoload/conque_term/conque_sole_subprocess.pyc
+/autoload/conque_term/conque_win32_util.pyc
