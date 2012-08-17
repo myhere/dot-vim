@@ -162,6 +162,8 @@ imap <silent><M-l> <Right>
 " 保存
 nmap <silent><C-s> :w<CR>
 imap <silent><C-s> <Esc>:w<CR>
+nmap <silent><C-S-s> :wa<CR>
+imap <silent><C-S-s> <Esc>:wa<CR>
 
 
 " 快速移动
