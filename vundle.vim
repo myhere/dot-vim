@@ -35,9 +35,6 @@ Bundle 'Lokaltog/vim-easymotion'
 " 对齐
 Bundle 'godlygeek/tabular'
 
-" statusline, 显示 ctrl-p 有问题
-" Bundle 'Lokaltog/vim-powerline'
-
 
 " snipmate's dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -64,7 +61,6 @@ let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
 let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
 
 
-
 " windows 下 ack 安装依赖 https://github.com/myhere/bin-in-path_windows/blob/master/ack.bat
 if executable('ack')
   Bundle 'mileszs/ack.vim'
@@ -84,7 +80,6 @@ Bundle 'FuzzyFinder'
 " :h fuf-vimrc-example
 nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
 nnoremap <silent> ,b  :FufBuffer<CR>
-
 
 
 " 重命名
