@@ -35,6 +35,9 @@ Bundle 'Lokaltog/vim-easymotion'
 " 对齐
 Bundle 'godlygeek/tabular'
 
+" statusline, 显示 ctrl-p 有问题
+" Bundle 'Lokaltog/vim-powerline'
+
 
 " snipmate's dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
