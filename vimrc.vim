@@ -70,8 +70,7 @@ if has('statusline')
   " Broken down into easily includeable segments
   set statusline=%F             " Filename
   set statusline+=%m%r%h%w      " Options
-  set statusline+=%<\ [%{&ff}/%Y/%{&fenc==\"\"?&enc:&fenc}] " filetype
-  " set statusline+=%<\ [%{&fenc==\"\"?&enc:&fenc}]  " fileencoding
+  set statusline+=%<\ [%{&ff}/%{&ft}/%{&fenc}] " filetype
   " set statusline+=%{fugitive#statusline()} "  Git Hotness
   " set statusline+=\ [%{getcwd()}]         " current dir
   " set statusline+=\ [%<%{expand('%:p:h')}]    " path to current file
@@ -162,6 +161,8 @@ imap <silent><M-l> <Right>
 " 保存
 nmap <silent><C-s> :w<CR>
 imap <silent><C-s> <Esc>:w<CR>
+nmap <silent><C-S-s> :wa<CR>
+imap <silent><C-S-s> <Esc>:wa<CR>
 
 
 " 快速移动
