@@ -133,6 +133,9 @@ Bundle 'css3-syntax-plus'
 " less 
 Bundle 'groenewege/vim-less'
 
+" let g:cssColorVimDoNotMessMyUpdatetime = 1
+Bundle 'skammer/vim-css-color'
+
 " json syntax highlight
 Bundle 'vim-json-bundle'
 au! BufRead,BufNewFile *.json set filetype=json
