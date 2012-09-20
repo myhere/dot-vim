@@ -61,6 +61,7 @@ let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
 let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
 
 
+
 " windows 下 ack 安装依赖 https://github.com/myhere/bin-in-path_windows/blob/master/ack.bat
 if executable('ack')
   Bundle 'mileszs/ack.vim'
@@ -143,8 +144,12 @@ au! BufRead,BufNewFile *.json set filetype=json
 Bundle 'Gundo'
 
 
+" jscomplete
+Bundle "teramako/jscomplete-vim"
+:let g:jscomplete_use = ['dom', 'moz']
 " nodejs 'omnifunc' function of vim
 Bundle 'git@github.com:myhere/vim-nodejs-complete.git'
+let g:node_usejscomplete = 1
 
 " for vim-script debug
 Bundle 'Decho'
