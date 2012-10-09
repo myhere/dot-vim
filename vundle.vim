@@ -70,9 +70,35 @@ endif
 
 " zencoding
 Bundle 'ZenCoding.vim'
+let g:user_zen_settings = {
+\  'lang': "zh-CN",
+\  'timezone': ' GMT+0800',
+\  'javascript': {
+\    'snippets': {
+\      'cc':
+\         "/**\n"
+\        ." * @author   Lin Zhang <myhere.2009@gmail.com>\n"
+\        ." * @datetime ${datetime}\n"
+\        ." */"
+\    }
+\   },
+\  'css': {
+\    'extends': 'js'
+\   },
+\  'php': {
+\    'snippets': {
+\      'cc':
+\         "<?php\n"
+\        ."/**\n"
+\        ." * @author   Lin Zhang <myhere.2009@gmail.com>\n"
+\        ." * @datetime ${datetime}\n"
+\        ." */"
+\     }
+\   }
+\}
+
 
 " 注释
-" Bundle 'scrooloose/nerdcommenter'
 Bundle 'tComment'
 
 " fuzzyFinder 打开文件
