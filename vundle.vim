@@ -143,7 +143,7 @@ Bundle 'compilerjsl.vim'
 let g:jsl_config = '~/.vim/conf/jsl.conf'
 
 " favEx
-Bundle 'FavEx' 
+" Bundle 'FavEx' 
 
 " jsbeautify
 Bundle 'jsbeautify'
