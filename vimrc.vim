@@ -81,9 +81,11 @@ endif
 set diffopt=vertical
 set splitright
 
-" 无限回退, 确保目录存在
-set undodir=~/.vim/vim-undodir
-set undofile
+if has('persistent_undo')
+  " 无限回退, 确保目录存在
+  set undodir=~/.vim/vim-undodir
+  set undofile
+endif
 
 
 " 进入 php 文件 help 设置查看 php-manual
@@ -174,6 +176,14 @@ imap <silent><C-S-s> <Esc>:wa<CR>
 " 快速移动
 map <C-k> 5k
 map <C-j> 5j
+
+nnoremap j gj
+nnoremap k gk
+
+map zl zL
+map zh zH
+
+
 
 " 插入当前日期
 nnoremap <F7> "=strftime("%c")<CR>P

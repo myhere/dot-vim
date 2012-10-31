@@ -108,6 +108,7 @@ Bundle 'FuzzyFinder'
 nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
 nnoremap <silent> ,b  :FufBuffer<CR>
 
+Bundle 'tpope/vim-surround'
 
 " 重命名
 Bundle 'renamer.vim'
