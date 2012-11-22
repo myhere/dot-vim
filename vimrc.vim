@@ -138,9 +138,7 @@ vnoremap :sv <Esc>:%s;\%V\%V;;<Left><Left><left><Left><Left>
 
 
 " 打开 cmd
-if (has('win32'))
-  map <silent> <Leader>st :silent !start<CR>
-endif
+map <silent> <Leader>st :silent shell<CR>
 
 map <silent> <Leader>q :close<CR><CR>
 
