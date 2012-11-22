@@ -19,7 +19,7 @@ Bundle 'gmarik/vundle'
 
 " NERDTree 
 Bundle 'scrooloose/nerdtree.git'
-map <silent> ,v :NERDTree<CR>
+map <silent> <Leader>v :NERDTree<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git$', '\.hg', '\.svn', '\.bzr', '^\.$', '^\.\.$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
@@ -105,8 +105,8 @@ Bundle 'tComment'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " :h fuf-vimrc-example
-nnoremap <silent> ,f  :FufFileWithCurrentBufferDir<CR>
-nnoremap <silent> ,b  :FufBuffer<CR>
+nnoremap <silent> <Leader>f  :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> <Leader>b  :FufBuffer<CR>
 
 Bundle 'tpope/vim-surround'
 
@@ -124,7 +124,7 @@ let g:bufExplorerSplitRight=0
 Bundle 'taglist.vim'
 " 只显示当前文件
 let Tlist_Show_One_File = 1
-nnoremap <silent> ,t :TlistToggle<CR>
+nnoremap <silent> <Leader>t :TlistToggle<CR>
 
 " vimwiki
 Bundle 'vimwiki'
