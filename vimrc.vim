@@ -132,7 +132,7 @@ vnoremap <silent> <Leader>? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 
 " search in visual area
 " :help \%V
-vnoremap / <Esc>/\%V\%V<Left><Left><Left>
+vnoremap # <Esc>/\%V\%V<Left><Left><Left>
 " replace in visual area
 vnoremap :sv <Esc>:%s;\%V\%V;;<Left><Left><left><Left><Left>
 

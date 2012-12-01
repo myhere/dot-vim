@@ -114,7 +114,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'renamer.vim'
 
 " 搜索补全
-Bundle 'SearchComplete'
+" Bundle 'SearchComplete'
 
 " bufexplorer.zip
 Bundle 'bufexplorer.zip'
