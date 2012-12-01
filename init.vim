@@ -3,6 +3,11 @@ if (has('win32') || has('win64'))
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
+" 改变 mapleader, change character search command
+nnoremap \ ,
+let mapleader = ","
+
+" 
 so ~/.vim/vundle.vim
 so ~/.vim/vimrc.vim
 

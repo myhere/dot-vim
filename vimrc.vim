@@ -123,13 +123,12 @@ colorscheme desert
 
 
 " ------------------按键映射------------------
-
 " 复制
 vnoremap <silent> <S-y> "+y
 
 " 搜索选中
-vnoremap <silent> ,/ y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
-vnoremap <silent> ,? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+vnoremap <silent> <Leader>/ y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+vnoremap <silent> <Leader>? y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 
 " search in visual area
 " :help \%V
@@ -141,12 +140,12 @@ vnoremap :sv <Esc>:%s;\%V\%V;;<Left><Left><left><Left><Left>
 " 打开 cmd
 map <silent> <Leader>st :silent shell<CR>
 
-map <silent> ,q :close<CR><CR>
+map <silent> <Leader>q :close<CR><CR>
 
 "" 窗口大小
-map <silent> ,> :vert res<CR>
-map <silent> ,< :res<CR>
-map <silent> ,, <C-W>=
+map <silent> <Leader>> :vert res<CR>
+map <silent> <Leader>< :res<CR>
+map <silent> <Leader>, <C-W>=
 
 " buffer 切换
 nnoremap <silent> [b :bprevious<CR>
@@ -184,6 +183,10 @@ map <C-j> 5j
 nnoremap j gj
 nnoremap k gk
 
+" 移动参考窗口
+nnoremap <M-f> <C-w>w<C-f><C-w>w
+nnoremap <M-b> <C-w>w<C-b><C-w>w
+
 map zl zL
 map zh zH
 
@@ -196,7 +199,7 @@ inoremap <F7> <C-R>=strftime("%c")<CR>
 
 " ------------------单独管理plugin按键映射------------------
 "  conque 按键
-nnoremap <silent> ,c :ConqueTermVSplit cmd<CR>
+nnoremap <silent> <Leader>c :ConqueTermVSplit cmd<CR>
 
 
 
