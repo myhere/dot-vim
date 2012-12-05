@@ -150,6 +150,12 @@ map <silent> <Leader>> :vert res<CR>
 map <silent> <Leader>< :res<CR>
 map <silent> <Leader>, <C-W>=
 
+" buffer 切换
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
 " command-mode 移动
 cnoremap <M-f> <Right>
 cnoremap <M-b> <Left>
