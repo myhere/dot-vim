@@ -138,7 +138,10 @@ vnoremap :sv <Esc>:%s;\%V\%V;;<Left><Left><left><Left><Left>
 
 
 " 打开 cmd
-map <silent> <Leader>st :silent shell<CR>
+if has('win32')
+  map <silent> <Leader>st :silent !start<CR>
+endif
+
 
 map <silent> <Leader>q :close<CR><CR>
 
@@ -201,6 +204,10 @@ inoremap <F7> <C-R>=strftime("%c")<CR>
 "  conque 按键
 nnoremap <silent> <Leader>c :ConqueTermVSplit cmd<CR>
 
+
+" ------------------command------------------
+" 垂直打开帮助窗口
+cabbrev h <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'vertical help' : 'h')<CR>
 
 
 " ------------------函数------------------
