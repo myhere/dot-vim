@@ -148,7 +148,7 @@ map <silent> <Leader>q :close<CR><CR>
 "" 窗口大小
 map <silent> <Leader>> :vert res<CR>
 map <silent> <Leader>< :res<CR>
-map <silent> <Leader>, <C-W>=
+map <silent> <Leader>; <C-W>=
 
 " buffer 切换
 nnoremap <silent> [b :bprevious<CR>
