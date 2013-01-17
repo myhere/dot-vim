@@ -171,6 +171,8 @@ au! BufRead,BufNewFile *.json set filetype=json
 Bundle 'Gundo'
 
 
+Bundle "lepture/vim-velocity"
+
 " jscomplete
 Bundle "teramako/jscomplete-vim"
 :let g:jscomplete_use = ['dom', 'moz']
