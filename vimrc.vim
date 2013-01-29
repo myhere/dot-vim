@@ -193,6 +193,9 @@ nnoremap <M-b> <C-w>w<C-b><C-w>w
 map zl zL
 map zh zH
 
+nnoremap ' `
+nnoremap ` '
+
 
 
 " 插入当前日期
