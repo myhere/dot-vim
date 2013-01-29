@@ -176,7 +176,10 @@ Bundle "teramako/jscomplete-vim"
 :let g:jscomplete_use = ['dom', 'moz']
 " nodejs 'omnifunc' function of vim
 Bundle 'git@github.com:myhere/vim-nodejs-complete.git'
-let g:node_usejscomplete = 1
+let g:nodejs_complete_config = {
+\  'js_compl_fn': 'jscomplete#CompleteJS',
+\  'max_node_compl_len': 15
+\}
 
 " for vim-script debug
 Bundle 'Decho'
