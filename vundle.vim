@@ -41,7 +41,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 " from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
 Bundle 'garbas/vim-snipmate'
-Bundle 'spf13/snipmate-snippets'
+Bundle 'git@github.com:myhere/snipmate-snippets.git'
 " Source support_function.vim to support snipmate-snippets.
 if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
   source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
