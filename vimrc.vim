@@ -93,7 +93,7 @@ set rtp+=~/.vim/php-manual/
 autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
 
 " 进入 js 文件 https://github.com/guileen/vim-node
-autocmd FileType javascript set dictionary+=~/.vim/node-dict/dict/node.dict
+autocmd FileType javascript set dictionary+=~/.vim/node-dict/dict/node.dict | set suffixesadd=.js
 
 
 " 切换 buffer 后立即切换 cwd
@@ -114,6 +114,11 @@ function! ReadSession()
 endfunction
 " 启动 vim 时自动读取 session 文件, 目前重新定义 vim.bat/gvim.bat
 " autocmd VimEnter * :call ReadSession()
+
+
+" gf 文件查找问题
+set includeexpr=GuessFilename(v:fname)
+
 
 
 syntax on
@@ -300,4 +305,26 @@ function MyDiff()
     let cmd = $VIMRUNTIME . '\diff'
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+
+" gf 找不到文件时去掉 文件名中的 ./ 和  ../
+" :h path
+function! GuessFilename(filename)
+  let ret = ''
+
+  if a:filename =~ '\.\/\.\.\/'
+    let ret = strpart(a:filename, 5)
+  elseif a:filename =~ '\.\.\/'
+    let ret = strpart(a:filename, 3)
+  elseif a:filename =~ '\.\/'
+    let ret = strpart(a:filename, 2)
+  endif
+
+  if len(ret)
+    return ret
+  " 加上后缀名, 如 nodejs 可以省略 .js
+  else
+    return a:filename
+  endif
 endfunction
