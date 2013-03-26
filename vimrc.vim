@@ -313,17 +313,16 @@ endfunction
 function! GuessFilename(filename)
   let ret = ''
 
-  if a:filename =~ '\.\/\.\.\/'
+  if a:filename =~ '^\.\/\.\.\/'
     let ret = strpart(a:filename, 5)
-  elseif a:filename =~ '\.\.\/'
+  elseif a:filename =~ '^\.\.\/'
     let ret = strpart(a:filename, 3)
-  elseif a:filename =~ '\.\/'
+  elseif a:filename =~ '^\.\/'
     let ret = strpart(a:filename, 2)
   endif
 
   if len(ret)
     return ret
-  " 加上后缀名, 如 nodejs 可以省略 .js
   else
     return a:filename
   endif
