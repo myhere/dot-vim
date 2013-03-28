@@ -170,8 +170,9 @@ au! BufRead,BufNewFile *.json set filetype=json
 
 Bundle 'Gundo'
 
-
 Bundle "lepture/vim-velocity"
+
+Bundle "pangloss/vim-javascript"
 
 " jscomplete
 Bundle "teramako/jscomplete-vim"
