@@ -54,8 +54,9 @@ Bundle 'SirVer/ultisnips'
 Bundle 'JazzCore/neocomplcache-ultisnips'
 Bundle 'git@github.com:myhere/vim-snippets.git'
 let g:UltiSnipsSnippetDirectories=['my-UltiSnips']
-let g:UltiSnipsJumpForwardTrigger  = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsEditSplit = 'vertical'
+" let g:UltiSnipsJumpForwardTrigger  = '<tab>'
+" let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 
 " ctrlp buffer|mru
