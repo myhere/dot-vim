@@ -38,6 +38,7 @@ Bundle 'godlygeek/tabular'
 
 " 补全
 Bundle 'Shougo/neocomplcache'
+g:neocomplcache_enable_at_startup = 1
 Bundle 'SirVer/ultisnips'
 Bundle 'JazzCore/neocomplcache-ultisnips'
 Bundle 'myhere/vim-snippets'
