@@ -32,6 +32,7 @@
 3. `conque`, 更新文件到 http://code.google.com/p/conque/ 下载
 4. 解压 `php-manual/vim-php-manual.tgz` 文件到 `php-manual/doc/` 目录下, 具体见: [README](/myhere/dot-vim/tree/master/php-manual/README.md)
 5. `node` 的 dictionary 通过 git `submodule` 管理, 对应设置放在 `vimrc.vim` 中
+6. `UltiSnips` 依赖 python
 
 
 ## 说明

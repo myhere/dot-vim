@@ -36,25 +36,26 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
 
 
+" snipmate's dependencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+" from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
+Bundle 'garbas/vim-snipmate'
+" Source support_function.vim to support snipmate-snippets.
+if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+  source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+endif
+
+
 " 补全
 Bundle 'Shougo/neocomplcache'
-g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 Bundle 'SirVer/ultisnips'
 Bundle 'JazzCore/neocomplcache-ultisnips'
-Bundle 'myhere/vim-snippets'
-let g:UltiSnipsSnippetDirectories=["mycoolsnippets"]
-
-
-" snipmate's dependencies
-" Bundle "MarcWeber/vim-addon-mw-utils"
-" Bundle "tomtom/tlib_vim"
-" from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
-" Bundle 'garbas/vim-snipmate'
-" Bundle 'git@github.com:myhere/snipmate-snippets.git'
-" Source support_function.vim to support snipmate-snippets.
-" if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
-"   source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
-" endif
+Bundle 'git@github.com:myhere/vim-snippets.git'
+let g:UltiSnipsSnippetDirectories=['my-UltiSnips']
+let g:UltiSnipsJumpForwardTrigger  = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 
 " ctrlp buffer|mru
