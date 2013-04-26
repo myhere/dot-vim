@@ -36,16 +36,24 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
 
 
+" 补全
+Bundle 'Shougo/neocomplcache'
+Bundle 'SirVer/ultisnips'
+Bundle 'JazzCore/neocomplcache-ultisnips'
+Bundle 'myhere/vim-snippets'
+let g:UltiSnipsSnippetDirectories=["mycoolsnippets"]
+
+
 " snipmate's dependencies
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
+" Bundle "MarcWeber/vim-addon-mw-utils"
+" Bundle "tomtom/tlib_vim"
 " from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
-Bundle 'garbas/vim-snipmate'
-Bundle 'git@github.com:myhere/snipmate-snippets.git'
+" Bundle 'garbas/vim-snipmate'
+" Bundle 'git@github.com:myhere/snipmate-snippets.git'
 " Source support_function.vim to support snipmate-snippets.
-if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
-  source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
-endif
+" if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+"   source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+" endif
 
 
 " ctrlp buffer|mru
@@ -59,6 +67,7 @@ let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 10
 let g:ctrlp_root_markers = ['myhere.zl', '.git', '.hg', '.svn', '.bzr','_darcs']
 let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
+
 
 
 

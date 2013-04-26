@@ -55,7 +55,8 @@ set softtabstop=2
 " unify
 set shiftwidth=2
 
-set textwidth=78
+" set textwidth=78
+set textwidth=0
 
 " 状态栏设置
 if has('cmdline_info')
