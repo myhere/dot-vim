@@ -69,7 +69,7 @@ if has('statusline')
   set laststatus=2
 
   " Broken down into easily includeable segments
-  set statusline=%f             " Filename
+  set statusline=%t             " Filename
   set statusline+=%m%r%h%w      " Options
   set statusline+=\ [%<%{&ff}/%{&ft}/%{&fenc}] " filetype
   " set statusline+=\ [%<%{expand('%:p:h')}]    " path to current file
