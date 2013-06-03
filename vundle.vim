@@ -42,19 +42,21 @@ Bundle "tomtom/tlib_vim"
 " from  https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
 Bundle 'garbas/vim-snipmate'
 " Source support_function.vim to support snipmate-snippets.
-" if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
-"   source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
-" endif
+if filereadable(expand("~/.vim/bundle/vim-snippets/helpers/support_functions.vim"))
+  source ~/.vim/bundle/vim-snippets/helpers/support_functions.vim
+endif
 
 
 " 补全
 Bundle 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
-Bundle 'SirVer/ultisnips'
-Bundle 'JazzCore/neocomplcache-ultisnips'
+
+
+" Bundle 'SirVer/ultisnips'
+" Bundle 'JazzCore/neocomplcache-ultisnips'
 Bundle 'git@github.com:myhere/vim-snippets.git'
-let g:UltiSnipsSnippetDirectories=['my-UltiSnips']
-let g:UltiSnipsEditSplit = 'vertical'
+" let g:UltiSnipsSnippetDirectories=['my-UltiSnips']
+" let g:UltiSnipsEditSplit = 'vertical'
 " let g:UltiSnipsJumpForwardTrigger  = '<tab>'
 " let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
@@ -141,9 +143,9 @@ nnoremap <silent> <Leader>t :TlistToggle<CR>
 " vimwiki
 Bundle 'vimwiki'
 let wiki_1 = {}
-let wiki_1.path = 'D:/work/www/myhere.zl/web/vimwiki/wiki/'
-let wiki_1.path_html = 'D:/work/www/myhere.zl/web/vimwiki/wiki_html/'
-let wiki_1.template_path = 'D:/work/www/myhere.zl/web/vimwiki/templates/'
+let wiki_1.path = 'D:/work/vimwiki/wiki/'
+let wiki_1.path_html = 'D:/work/vimwiki/wiki_html/'
+let wiki_1.template_path = 'D:/work/vimwiki/templates/'
 let wiki_1.template_default = 'default'
 let wiki_1.template_ext = '.tmpl'
 let wiki_1.auto_export = 1
