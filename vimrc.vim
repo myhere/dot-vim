@@ -65,6 +65,7 @@ if has('cmdline_info')
   set showcmd                 " show partial commands in status line and
   " selected characters/lines in visual mode
 endif
+
 if has('statusline')
   set laststatus=2
 

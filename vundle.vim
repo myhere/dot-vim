@@ -26,8 +26,10 @@ let NERDTreeShowHidden=1
 let NERDTreeChDirMode=0
 
 
-Bundle 'kana/vim-scratch'
-map <silent> <Leader>so :ScratchOpen<CR>
+" Bundle 'kana/vim-scratch'
+" map <silent> <Leader>so :ScratchOpen<CR>
+Bundle 'duff/vim-scratch'
+map <silent> <Leader>so :Scratch<CR>
 
 " 快速移动
 Bundle 'Lokaltog/vim-easymotion'
@@ -49,7 +51,7 @@ endif
 
 " 补全
 Bundle 'Shougo/neocomplcache'
-let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_at_startup = 1
 
 
 " Bundle 'SirVer/ultisnips'
@@ -200,6 +202,7 @@ let g:nodejs_complete_config = {
 
 " for vim-script debug
 Bundle 'Decho'
+
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
