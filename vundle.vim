@@ -20,7 +20,7 @@ Bundle 'gmarik/vundle'
 " NERDTree 
 Bundle 'scrooloose/nerdtree.git'
 map <silent> <Leader>v :NERDTree<CR>
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git$', '\.hg', '\.svn', '\.bzr', '^\.$', '^\.\.$']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr', '^\.$', '^\.\.$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=0
