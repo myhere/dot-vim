@@ -150,6 +150,10 @@ if has('win32')
 endif
 
 
+" 输出 ipconfig, 并高亮到 ipv4 地址
+map <silent> <Leader>ip  :exe 'silent r!ipconfig' \| exe '/\mIPv4 地址.\{-}\zs\d\{1,3}\(\.\d\{1,3}\)\{3}\ze' \| exe 'normal nvE"+y'
+
+
 map <silent> <Leader>q :close<CR><CR>
 
 "" 窗口大小
