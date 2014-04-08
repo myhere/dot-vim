@@ -140,7 +140,8 @@ let g:bufExplorerSplitRight=0
 Bundle 'taglist.vim'
 " 只显示当前文件
 let Tlist_Show_One_File = 1
-nnoremap <silent> <Leader>t :TlistToggle<CR>
+nnoremap <silent> <Leader>to :TlistOpen<CR>
+nnoremap <silent> <Leader>tc :TlistClose<CR>
 
 " vimwiki
 Bundle 'vimwiki'
@@ -199,6 +200,10 @@ let g:nodejs_complete_config = {
 \  'js_compl_fn': 'jscomplete#CompleteJS',
 \  'max_node_compl_len': 15
 \}
+
+
+" editorconfig
+Bundle 'editorconfig/editorconfig-vim'
 
 " for vim-script debug
 Bundle 'Decho'
