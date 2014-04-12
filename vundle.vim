@@ -163,14 +163,17 @@ let g:jsl_config = '~/.vim/conf/jsl.conf'
 " favEx
 " Bundle 'FavEx' 
 
-" jsbeautify
-Bundle 'jsbeautify'
+" jsbeautify, i use ':r!uglifyjs % -b' to do it
+" Bundle 'jsbeautify'
 
 " html文件 %
 Bundle 'matchit.zip'
 
 " 版本控制 svn, git, ...
-Bundle 'vcscommand.vim'
+" Bundle 'vcscommand.vim'
+
+" git 版本控制
+Bundle 'tpope/vim-fugitive'
 
 " css3 相关
 Bundle 'css3-syntax-plus'

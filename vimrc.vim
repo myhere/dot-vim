@@ -74,8 +74,8 @@ if has('statusline')
   set statusline+=%m%r%h%w      " Options
   set statusline+=\ [%<%{&ff}/%{&ft}/%{&fenc}] " filetype
   " set statusline+=\ [%<%{expand('%:p:h')}]    " path to current file
-  " set statusline+=%{fugitive#statusline()} "  Git Hotness
   set statusline+=\ [%<%{getcwd()}]         " current dir
+  set statusline+=\ %{fugitive#statusline()} "  Git Hotness, 依赖 `Bundle 'tpope/vim-fugitive'`
   set statusline+=%=%-10.(%l,%c%V%)\ %p%% " Right aligned file nav info
 endif
 
