@@ -85,8 +85,8 @@ endif
 
 
 " zencoding
-Bundle 'ZenCoding.vim'
-let g:user_zen_settings = {
+Bundle "mattn/emmet-vim"
+let g:user_emmet_settings = {
 \  'lang': "zh-CN",
 \  'timezone': ' GMT+0800',
 \  'javascript': {
