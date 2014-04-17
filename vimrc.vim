@@ -214,10 +214,6 @@ nnoremap <F7> "=strftime("%c")<CR>P
 inoremap <F7> <C-R>=strftime("%c")<CR>
 
 
-" ------------------单独管理plugin按键映射------------------
-"  conque 按键
-nnoremap <silent> <Leader>c :ConqueTermVSplit cmd<CR>
-
 
 " ------------------command------------------
 " 垂直打开帮助窗口
@@ -231,44 +227,6 @@ cabbrev h <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'vertical help' : 'h')<CR
 function! BeautifyHtml()
   setlocal equalprg=tidy\ -quiet\ -indent\ -wrap\ 0\ --show-errors\ 0
   normal gg=G
-endfunction
-
-" YUICompressor
-function! YUICompressor()
-  " let yuicompressor_program = 'java -jar D:/tools/ourtools/yui-compressor/yuicompressor.jar --verbose'
-  let yuicompressor_program = 'java -jar D:/tools/ourtools/yui-compressor/yuicompressor.jar'
-
-  let yui_option_charset = '--charset ' . &fileencoding
-
-  let current_file = expand('%:p')
-  if match(current_file, "\.js$") != -1
-    let yui_option_type = '--type js'
-  elseif match(current_file, "\.css$") != -1
-    let yui_option_type = '--type css'
-  else
-    echoerr 'Error: File "' . current_file . '" is not js or css!'
-    return
-  endif
-
-  let yui_option_outputfile = substitute(current_file, '\.\(js\|css\)$', '-min\.\1', "")
-  if yui_option_outputfile == current_file
-    echoerr 'Error: Cannot substitute filename to "-min" file!'
-    return
-  endif
-
-  let yui_option_outputfile = '-o ' . shellescape(yui_option_outputfile)
-  let current_file = shellescape(current_file)
-
-
-  let yui_options = yui_option_charset . ' ' . yui_option_type . ' ' . yui_option_outputfile . ' ' . current_file
-  let cmd = yuicompressor_program . ' ' . yui_options
-
-  " echo cmd
-  " return
-
-  let cmd_output = system(cmd)
-
-  echo cmd_output
 endfunction
 
 
