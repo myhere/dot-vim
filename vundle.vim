@@ -188,6 +188,9 @@ Bundle 'skammer/vim-css-color'
 Bundle 'vim-json-bundle'
 au! BufRead,BufNewFile *.json set filetype=json
 
+" jinja syntax
+Bundle 'mitsuhiko/vim-jinja'
+
 Bundle 'Gundo'
 
 Bundle "lepture/vim-velocity"
