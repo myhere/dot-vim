@@ -2,7 +2,7 @@
 set nocompatible
 " 不产生备份文件
 set nobackup
-set ignorecase
+set noignorecase
 set smartcase
 set hlsearch
 set incsearch
@@ -90,6 +90,14 @@ if has('persistent_undo')
 endif
 
 
+" 统一路径分隔符
+set shellslash
+
+
+" gf 文件查找问题
+set includeexpr=GuessFilename(v:fname)
+
+
 " 进入 php 文件 help 设置查看 php-manual
 set rtp+=~/.vim/php-manual/
 autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
@@ -118,8 +126,8 @@ endfunction
 " autocmd VimEnter * :call ReadSession()
 
 
-" gf 文件查找问题
-set includeexpr=GuessFilename(v:fname)
+" markdown .md 后缀支持
+au BufRead,BufNewFile *.md set filetype=markdown
 
 
 

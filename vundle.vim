@@ -67,13 +67,15 @@ Bundle 'git@github.com:myhere/vim-snippets.git'
 " fuzzy file|buffer|mru finder
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_cmd = 'CtrlPBuffer'
-let g:ctrlp_by_filename = 1
+let g:ctrlp_by_filename = 0
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
 let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 10
 let g:ctrlp_root_markers = ['vimwiki', '.git', '.hg', '.svn', '.bzr','_darcs']
-let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|build$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 
 
 
