@@ -25,6 +25,8 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=0
 
+" 注释
+Bundle 'scrooloose/nerdcommenter'
 
 " Bundle 'kana/vim-scratch'
 " map <silent> <Leader>so :ScratchOpen<CR>
@@ -116,8 +118,6 @@ let g:user_emmet_settings = {
 \}
 
 
-" 注释
-Bundle 'tComment'
 
 " fuzzyFinder 打开文件
 Bundle 'L9'
@@ -194,6 +194,8 @@ au! BufRead,BufNewFile *.json set filetype=json
 Bundle 'mitsuhiko/vim-jinja'
 
 Bundle 'Gundo'
+
+Bundle 'spf13/vim-autoclose'
 
 Bundle "lepture/vim-velocity"
 
