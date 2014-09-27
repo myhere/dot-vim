@@ -94,6 +94,9 @@ endif
 set shellslash
 
 
+set shell=D:/programs/Git/bin/sh.exe
+
+
 " gf 文件查找问题
 set includeexpr=GuessFilename(v:fname)
 
