@@ -30,7 +30,7 @@ let NERDTreeShowHidden=1
 let NERDTreeChDirMode=0
 
 " 注释
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tomtom/tcomment_vim'
 
 " Bundle 'kana/vim-scratch'
 " map <silent> <Leader>so :ScratchOpen<CR>

@@ -90,11 +90,12 @@ if has('persistent_undo')
 endif
 
 
+" ctrlp 下使用 / 可以过滤文件
 " 统一路径分隔符
 set shellslash
 
 
-set shell=D:/programs/Git/bin/sh.exe
+" set shell=D:/programs/Git/bin/sh.exe
 
 
 " gf 文件查找问题
