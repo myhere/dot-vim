@@ -2,7 +2,7 @@
 set nocompatible
 " 不产生备份文件
 set nobackup
-set noignorecase
+set ignorecase
 set smartcase
 set hlsearch
 set incsearch
@@ -162,8 +162,19 @@ if has('win32')
 endif
 
 
-" 输出 ipconfig, 并高亮到 ipv4 地址
-map <silent> <Leader>ip  :exe 'silent r!ipconfig' \| exe '/\mIPv4.\{-}\zs\d\{1,3}\(\.\d\{1,3}\)\{3}\ze' \| exe 'normal nvE"+y'<CR>
+" 复制当前 ip 到剪切板
+" map <silent> <Leader>ip  :exe 'silent r!ipconfig' \| exe '/\mIPv4.\{-}\zs\d\{1,3}\(\.\d\{1,3}\)\{3}\ze' \| exe 'normal nvE"+y'<CR>
+map <silent> <Leader>ip  :call CopyIpAddressToClipboard()
+function! CopyIpAddressToClipboard()
+  let cmdOutput = system('ipconfig')
+
+  let ipAddress = matchstr(cmdOutput, '\mIPv4.\{-}\zs\d\{1,3}\(\.\d\{1,3}\)\{3}\ze', 0)
+
+  " 复制到系统剪切板
+  let @+ = ipAddress
+endfunction
+
+
 
 
 map <silent> <Leader>q :close<CR><CR>
