@@ -164,11 +164,13 @@ endif
 
 " 复制当前 ip 到剪切板
 " map <silent> <Leader>ip  :exe 'silent r!ipconfig' \| exe '/\mIPv4.\{-}\zs\d\{1,3}\(\.\d\{1,3}\)\{3}\ze' \| exe 'normal nvE"+y'<CR>
-map <silent> <Leader>ip  :call CopyIpAddressToClipboard()
+map <silent> <Leader>ip  :call CopyIpAddressToClipboard()<CR>
 function! CopyIpAddressToClipboard()
   let cmdOutput = system('ipconfig')
 
   let ipAddress = matchstr(cmdOutput, '\mIPv4.\{-}\zs\d\{1,3}\(\.\d\{1,3}\)\{3}\ze', 0)
+
+  echo ipAddress
 
   " 复制到系统剪切板
   let @+ = ipAddress
