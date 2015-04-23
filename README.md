@@ -13,7 +13,7 @@
 
 2. Clone `Vundle`
      ```bash
-     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim
      ```
 
 3. Copy code below to `~/.vimrc` file

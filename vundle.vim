@@ -9,7 +9,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Bundle 'gmarik/Vundle.vim'
 
 
 
@@ -42,7 +42,6 @@ Bundle 'Lokaltog/vim-easymotion'
 
 " 对齐
 Bundle 'godlygeek/tabular'
-
 
 " snipmate's dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
